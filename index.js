@@ -53,9 +53,9 @@ class InView extends Component{
         rectWidth: x + width,
       })
     })
+    
     let isVisible = (
-      this.state.rectBottom != 0 && this.state.rectTop >= 0 && this.state.rectBottom <= win.height &&
-      this.state.rectWidth > 0 && this.state.rectWidth <= win.width
+      this.state.rectBottom >= -500 && this.state.rectTop <= (win.height + 500)
     )
 
     // notify the parent when the value changes
